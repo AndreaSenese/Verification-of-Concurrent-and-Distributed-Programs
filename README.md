@@ -1,0 +1,2 @@
+# Verification-of-Concurrent-and-Distributed-Programs
+An introduction to system verification => a first specification language: Petri nets and colored Petri nets; definition, properties and avaiable tools (GreatSPN) - a second specification language: process algebras; - properties' specification languages: linear temporal logic, branching temporal logics and available model-checking tools and associated tools (nuSMV and RGMEDD) - expressing timed models and timed properties: timed automata and timed branching logics and associated tool (Uppaal)
