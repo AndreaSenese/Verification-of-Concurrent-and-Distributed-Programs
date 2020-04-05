@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Rete A" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-3.5" label-y="0.0" name="copy_P0" x="11.0" y="20.0"/>
+      <transition label-x="-3.0" label-y="-1.0" name="copy_T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="11.55" y="24.0"/>
+      <place label-x="-2.0" label-y="-2.0" name="copy_P1" x="9.0" y="28.0"/>
+      <place label-x="1.5" label-y="-2.0" name="copy_P2" x="13.0" y="28.0"/>
+      <transition label-x="-3.0" label-y="0.0" name="copy_T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="9.55" y="32.0"/>
+      <transition label-x="2.0" label-y="1.5" name="copy_T2" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="13.55" y="32.0"/>
+      <place label-x="-2.5" name="copy_P3" x="9.0" y="36.0"/>
+      <place label-x="2.0" name="copy_P4" x="13.0" y="36.0"/>
+      <transition label-x="-3.0" label-y="0.0" name="copy_T3" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="11.55" y="40.0"/>
+      <place label-x="-3.0" label-y="0.0" name="copy_P5" x="11.0" y="43.0"/>
+      <place label-x="5.5" label-y="-2.5" name="Slave2" x="49.0" y="19.0"/>
+      <transition label-x="-2.0" label-y="-0.5" name="T4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="49.55" y="23.0"/>
+      <place label-x="2.0" label-y="0.0" name="P8" x="49.0" y="27.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T6" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="49.55" y="30.0"/>
+      <place label-x="2.5" label-y="0.0" name="P10" x="49.0" y="33.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T7" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="49.55" y="36.0"/>
+      <place name="P11" x="49.0" y="39.0"/>
+      <place label-y="-2.0" marking="M" name="copy_Master" x="30.0" y="12.0"/>
+      <transition label-x="1.5" label-y="1.5" name="OpL" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="30.55" y="17.0"/>
+      <place label-y="2.0" name="OpLocOK" x="30.0" y="21.0"/>
+      <transition label-y="2.0" name="insertRequestInBuff1" nservers-x="0.5" type="EXP" x="22.55" y="19.0"/>
+      <transition label-x="3.0" label-y="2.0" name="insertRequestInBuff2" nservers-x="0.5" type="EXP" x="36.55" y="19.0"/>
+      <place label-x="-0.5" label-y="-2.0" name="Buffer1" x="17.0" y="16.0"/>
+      <transition label-x="0.5" label-y="-2.0" name="copy_T11" nservers-x="0.5" type="EXP" x="12.55" y="15.0"/>
+      <transition label-x="4.0" label-y="0.0" name="returnReply1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="19.55" y="34.0"/>
+      <place label-x="1.5" name="Reply1" x="19.0" y="29.0"/>
+      <transition label-x="2.0" label-y="2.0" name="ReleaseMast1" nservers-x="0.5" type="EXP" x="28.55" y="28.0"/>
+      <place label-x="1.0" label-y="2.0" name="Buffer2" x="41.0" y="16.0"/>
+      <transition name="T14" nservers-x="0.5" type="EXP" x="46.55" y="14.0"/>
+      <transition label-x="-3.0" label-y="1.5" name="returnReply2" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="45.55" y="35.0"/>
+      <place label-x="-2.0" name="Reply2" x="45.0" y="31.0"/>
+      <transition label-x="3.0" label-y="2.0" name="ReleaseMast2" nservers-x="0.5" type="EXP" x="33.55" y="28.0"/>
+      <constant consttype="INTEGER" name="M" value="2" x="33.0625" y="5.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="1.0" name="copy___textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="5.5" x="26.25" y="1.5">Rete B</text-box>
+      <place label-x="3.5" label-y="0.0" marking="M" name="SizeBuff1" x="20.0" y="7.0"/>
+      <place label-y="-2.0" marking="2" name="Slave1" x="3.0" y="19.0"/>
+      <place label-x="3.5" label-y="0.0" marking="M" name="SizeBuff2" x="40.0" y="6.0"/>
+      <place label-x="-3.5" marking="2" name="P6" x="56.0" y="19.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="ElabResServ1" nservers-x="0.5" type="EXP" x="21.55" y="25.0"/>
+      <place label-x="-2.5" label-y="1.0" name="ResElab1" x="26.0" y="25.0"/>
+      <transition label-x="-1.5" label-y="2.0" name="ElabResServ2" nservers-x="0.5" type="EXP" x="45.55" y="26.0"/>
+      <place label-x="-3.5" label-y="-0.5" name="ResElab2" x="39.0" y="26.0"/>
+    </nodes>
+    <edges>
+      <arc head="copy_T0" kind="INPUT" tail="copy_P0"/>
+      <arc head="copy_P1" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_P2" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_T1" kind="INPUT" tail="copy_P1"/>
+      <arc head="copy_T2" kind="INPUT" tail="copy_P2"/>
+      <arc head="copy_P3" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="copy_P4" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_T3" kind="INPUT" tail="copy_P3"/>
+      <arc head="copy_T3" kind="INPUT" tail="copy_P4"/>
+      <arc head="copy_P5" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="T4" kind="INPUT" tail="Slave2"/>
+      <arc head="P8" kind="OUTPUT" tail="T4"/>
+      <arc head="T6" kind="INPUT" tail="P8"/>
+      <arc head="P10" kind="OUTPUT" tail="T6"/>
+      <arc head="T7" kind="INPUT" tail="P10"/>
+      <arc head="P11" kind="OUTPUT" tail="T7"/>
+      <arc head="OpL" kind="INPUT" tail="copy_Master"/>
+      <arc head="OpLocOK" kind="OUTPUT" tail="OpL"/>
+      <arc head="insertRequestInBuff1" kind="INPUT" tail="OpLocOK"/>
+      <arc head="insertRequestInBuff2" kind="INPUT" tail="OpLocOK"/>
+      <arc head="copy_T11" kind="INPUT" tail="Buffer1"/>
+      <arc head="Buffer1" kind="OUTPUT" tail="insertRequestInBuff1"/>
+      <arc head="Reply1" kind="OUTPUT" tail="returnReply1"/>
+      <arc head="copy_P0" kind="OUTPUT" tail="copy_T11">
+        <point x="12.5" y="19.5"/>
+      </arc>
+      <arc head="copy_T11" kind="INHIBITOR" tail="copy_P0"/>
+      <arc head="copy_Master" kind="OUTPUT" tail="ReleaseMast1">
+        <point x="28.5" y="13.0"/>
+      </arc>
+      <arc head="Buffer2" kind="OUTPUT" tail="insertRequestInBuff2"/>
+      <arc head="T14" kind="INPUT" tail="Buffer2"/>
+      <arc head="Slave2" kind="OUTPUT" tail="T14"/>
+      <arc head="T14" kind="INHIBITOR" tail="Slave2"/>
+      <arc head="copy_Master" kind="OUTPUT" tail="ReleaseMast2">
+        <point x="34.0" y="13.0"/>
+      </arc>
+      <arc head="Reply2" kind="OUTPUT" tail="returnReply2"/>
+      <arc head="returnReply2" kind="INPUT" tail="P11">
+        <point x="46.0" y="40.0"/>
+      </arc>
+      <arc head="insertRequestInBuff1" kind="INPUT" tail="SizeBuff1"/>
+      <arc head="SizeBuff1" kind="OUTPUT" tail="copy_T11"/>
+      <arc head="copy_T11" kind="INPUT" tail="Slave1"/>
+      <arc head="Slave1" kind="OUTPUT" tail="ReleaseMast1">
+        <point x="28.0" y="29.0"/>
+        <point x="28.0" y="47.0"/>
+        <point x="4.0" y="46.5"/>
+      </arc>
+      <arc head="insertRequestInBuff2" kind="INPUT" tail="SizeBuff2"/>
+      <arc head="SizeBuff2" kind="OUTPUT" tail="T14"/>
+      <arc head="T14" kind="INPUT" tail="P6"/>
+      <arc head="P6" kind="OUTPUT" tail="ReleaseMast2">
+        <point x="34.0" y="47.0"/>
+        <point x="57.5" y="47.0"/>
+      </arc>
+      <arc head="ElabResServ1" kind="INPUT" mult-x="1.2499618569074045" mult-y="-1.0" tail="Reply1">
+        <point x="18.0" y="30.0"/>
+        <point x="18.0" y="26.0"/>
+      </arc>
+      <arc head="ResElab1" kind="OUTPUT" tail="ElabResServ1"/>
+      <arc head="ReleaseMast1" kind="INPUT" tail="ResElab1">
+        <point x="27.0" y="29.0"/>
+      </arc>
+      <arc head="returnReply1" kind="INPUT" tail="copy_P5">
+        <point x="12.0" y="46.5"/>
+        <point x="20.0" y="46.5"/>
+      </arc>
+      <arc head="ReleaseMast2" kind="INPUT" tail="ResElab2">
+        <point x="40.0" y="29.0"/>
+      </arc>
+      <arc head="ResElab2" kind="OUTPUT" tail="ElabResServ2"/>
+      <arc head="ElabResServ2" kind="INPUT" tail="Reply2">
+        <point x="48.5" y="32.0"/>
+        <point x="48.5" y="27.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Rete A" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-10.0" label-y="2.5" name="Slave" x="13.0" y="20.0"/>
+      <transition label-x="-2.0" label-y="-0.5" name="T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="13.55" y="24.0"/>
+      <place label-x="-1.5" label-y="0.0" name="P1" x="11.0" y="28.0"/>
+      <place label-x="2.0" label-y="0.0" name="P2" x="15.0" y="28.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="11.55" y="32.0"/>
+      <transition label-x="2.5" label-y="-0.5" name="T2" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="15.55" y="32.0"/>
+      <place name="P3" x="11.0" y="36.0"/>
+      <place name="P4" x="15.0" y="36.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="T3" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="13.55" y="40.0"/>
+      <place name="P5" x="13.0" y="43.0"/>
+      <place label-x="3.0" label-y="-1.5" marking="N" name="Master" x="40.0" y="9.0"/>
+      <transition label-x="-1.5" label-y="1.5" name="OpLoc" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="32.55" y="9.0"/>
+      <place label-y="2.0" name="OpLocOk" x="32.0" y="14.0"/>
+      <transition label-x="-0.5" label-y="2.0" name="insertRequestInBuff" nservers-x="0.5" type="EXP" x="26.55" y="14.0"/>
+      <place label-x="1.0" label-y="-2.0" marking="N" name="SizeBuff" x="21.0" y="9.0"/>
+      <transition label-x="0.5" label-y="-2.0" name="T11" nservers-x="0.5" type="EXP" x="13.55" y="14.0"/>
+      <transition label-x="4.5" label-y="-4.0" name="ReleaseMast" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="24.55" y="30.0"/>
+      <place label-y="-2.0" name="Repl" x="24.0" y="24.0"/>
+      <transition label-x="-1.0" label-y="7.5" name="returnRep1" nservers-x="0.5" type="EXP" x="28.55" y="24.0"/>
+      <constant consttype="INTEGER" name="N" value="9" x="38.0625" y="7.0"/>
+      <constant consttype="INTEGER" name="S" value="2" x="38.25" y="5.0"/>
+      <place label-y="2.0" name="Buff" x="20.0" y="14.0"/>
+      <place label-x="6.0" label-y="-0.5" marking="S" name="P0" x="5.0" y="21.0"/>
+      <transition label-x="0.5" label-y="2.0" name="ElabResServ" nservers-x="0.5" type="EXP" x="20.55" y="24.0"/>
+      <place label-x="2.0" name="ResElab" x="24.0" y="19.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="1.0" name="__textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="9.0" x="17.5" y="3.5">Rete A</text-box>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" mult-x="1.5" mult-y="0.5" tail="Slave"/>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="T2" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="T1"/>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="P3"/>
+      <arc head="T3" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="T3"/>
+      <arc head="OpLoc" kind="INPUT" tail="Master"/>
+      <arc head="OpLocOk" kind="OUTPUT" tail="OpLoc"/>
+      <arc head="insertRequestInBuff" kind="INPUT" tail="OpLocOk"/>
+      <arc head="ReleaseMast" kind="INPUT" tail="P5">
+        <point x="25.0" y="44.0"/>
+      </arc>
+      <arc head="Repl" kind="OUTPUT" tail="ReleaseMast"/>
+      <arc head="Slave" kind="OUTPUT" tail="T11">
+        <point x="14.0" y="18.0"/>
+      </arc>
+      <arc head="T11" kind="INHIBITOR" mult-k="1.25380859375" mult-x="1.9999945420543082" mult-y="0.49998635513577305" tail="Slave">
+        <point x="14.181054687500001" y="16.95263671875"/>
+      </arc>
+      <arc head="Buff" kind="OUTPUT" tail="insertRequestInBuff"/>
+      <arc head="insertRequestInBuff" kind="INPUT" tail="SizeBuff"/>
+      <arc head="T11" kind="INPUT" tail="Buff"/>
+      <arc head="SizeBuff" kind="OUTPUT" tail="T11"/>
+      <arc head="T11" kind="INPUT" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="ReleaseMast">
+        <point x="31.5" y="31.0"/>
+        <point x="31.5" y="48.0"/>
+        <point x="6.0" y="48.0"/>
+      </arc>
+      <arc head="Master" kind="OUTPUT" tail="returnRep1">
+        <point x="41.0" y="25.0"/>
+      </arc>
+      <arc head="ElabResServ" kind="INPUT" tail="Repl"/>
+      <arc head="ResElab" kind="OUTPUT" tail="ElabResServ">
+        <point x="21.0" y="20.0"/>
+      </arc>
+      <arc head="returnRep1" kind="INPUT" tail="ResElab">
+        <point x="29.0" y="20.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

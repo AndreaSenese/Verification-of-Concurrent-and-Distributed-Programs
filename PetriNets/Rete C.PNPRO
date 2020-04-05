@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Rete C" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-y="-2.0" marking="1" name="Mast1" x="30.0" y="7.0"/>
+      <place label-y="-2.0" marking="1" name="Mast2" x="34.0" y="7.0"/>
+      <transition label-x="-1.0" label-y="-2.0" name="OpLocal1" nservers-x="0.5" type="EXP" x="22.55" y="7.0"/>
+      <transition label-y="-2.5" name="OpLocal2" nservers-x="0.5" type="EXP" x="39.55" y="11.0"/>
+      <place label-x="-2.0" label-y="0.0" name="cc_P2" x="9.0" y="18.0"/>
+      <transition label-x="-4.5" label-y="0.0" name="cc_T2" rotation="4.71238898038469" type="IMM" x="12.85" y="24.0"/>
+      <place label-x="-2.5" label-y="0.0" name="cc_P3" x="9.0" y="27.0"/>
+      <place label-x="2.0" label-y="-1.5" name="cc_P4" x="14.0" y="27.0"/>
+      <transition label-x="-3.0" label-y="0.0" name="cc_T3" rotation="4.71238898038469" type="IMM" x="9.85" y="31.0"/>
+      <transition label-x="3.0" label-y="0.0" name="copy_T4" rotation="4.71238898038469" type="IMM" x="15.85" y="31.0"/>
+      <place label-x="-3.0" label-y="0.0" name="cc_P5" x="9.0" y="34.0"/>
+      <place label-x="3.0" label-y="0.0" name="copy_P6" x="15.0" y="34.0"/>
+      <transition label-x="-2.0" label-y="1.0" name="T5" rotation="4.71238898038469" type="IMM" x="12.85" y="37.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="P7" x="47.0" y="15.0"/>
+      <transition label-x="3.0" label-y="0.0" name="copy_T6" rotation="4.71238898038469" type="IMM" x="47.85" y="18.0"/>
+      <place label-x="-3.0" label-y="0.0" name="copy_P8" x="45.0" y="22.0"/>
+      <place name="P9" x="49.0" y="22.0"/>
+      <transition label-x="2.0" label-y="1.0" name="copy_T7" rotation="4.71238898038469" type="IMM" x="45.85" y="26.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T8" rotation="4.71238898038469" type="IMM" x="49.85" y="26.0"/>
+      <place label-x="-3.0" label-y="0.0" name="copy_P10" x="45.0" y="30.0"/>
+      <place label-x="3.0" label-y="0.0" name="copy_P11" x="49.0" y="30.0"/>
+      <transition label-x="-2.0" label-y="1.0" name="copy_T9" rotation="4.71238898038469" type="IMM" x="47.85" y="33.0"/>
+      <place label-x="5.0" label-y="-4.0" name="OpLocalOk1" x="12.0" y="11.0"/>
+      <place label-x="-1.5" label-y="-2.0" name="OpLocalOk2" x="45.0" y="7.0"/>
+      <transition label-x="-2.5" label-y="0.5" name="T10" nservers-x="0.5" type="EXP" x="8.55" y="12.0"/>
+      <transition label-x="2.5" label-y="2.0" name="returnRepl1" type="IMM" x="20.85" y="27.0"/>
+      <place name="P14" x="12.0" y="41.0"/>
+      <transition name="T12" nservers-x="0.5" type="EXP" x="48.55" y="11.0"/>
+      <place name="P15" x="47.0" y="44.0"/>
+      <transition name="copy_T14" nservers-x="0.5" type="EXP" x="32.55" y="12.0"/>
+      <place name="ResElabor" x="32.0" y="22.0"/>
+      <transition label-x="-3.0" label-y="-0.5" name="ReleaseM1" type="IMM" x="30.85" y="18.0"/>
+      <transition label-x="2.5" label-y="0.0" name="ReleaseM2" type="IMM" x="34.85" y="18.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="1.0" name="__textBox4" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="4.25" x="26.875" y="1.5">Rete C</text-box>
+      <place label-y="-2.0" marking="1" name="SizeBuf1" x="6.0" y="5.0"/>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="Slave3" x="1.0" y="16.0"/>
+      <transition label-x="7.105427357601002E-15" label-y="2.0" name="ElabResServiz1" type="IMM" x="25.849999999999994" y="23.0"/>
+      <place label-y="-2.0" name="Repl1" x="20.0" y="21.0"/>
+      <transition label-x="3.5" label-y="1.5" name="insertRequestInBuff3" type="IMM" x="15.85" y="10.0"/>
+      <place label-x="-5.0" label-y="4.0" name="Buffer3" x="18.0" y="9.0"/>
+      <transition label-x="2.0" label-y="-2.0" name="insertRequestInBuff4" nservers-x="0.5" type="EXP" x="48.55" y="6.0"/>
+      <place label-x="2.5" label-y="-1.0" name="Buffer4" x="51.0" y="8.0"/>
+      <place label-y="-2.0" marking="1" name="SizeBuf2" x="58.0" y="5.0"/>
+      <place label-x="0.5" label-y="-2.5" marking="1" name="Slave4" x="59.0" y="15.0"/>
+      <transition label-x="-3.0" label-y="0.0" name="returnRepl2" type="IMM" x="34.85" y="42.0"/>
+      <place label-x="1.5" name="Repl2" x="34.0" y="37.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="ElabResServiz2" nservers-x="0.5" type="EXP" x="34.55" y="31.0"/>
+      <place name="cc_P1" x="39.0" y="31.0"/>
+      <transition label-y="-2.0" name="T13" type="IMM" x="37.85" y="27.0"/>
+      <transition label-y="-2.0" name="T15" type="IMM" x="41.85" y="27.0"/>
+    </nodes>
+    <edges>
+      <arc head="OpLocal1" kind="INPUT" tail="Mast1"/>
+      <arc head="OpLocal2" kind="INPUT" tail="Mast2"/>
+      <arc head="cc_T2" kind="INPUT" tail="cc_P2"/>
+      <arc head="cc_P3" kind="OUTPUT" tail="cc_T2"/>
+      <arc head="cc_P4" kind="OUTPUT" tail="cc_T2"/>
+      <arc head="cc_T3" kind="INPUT" tail="cc_P3"/>
+      <arc head="copy_T4" kind="INPUT" tail="cc_P4"/>
+      <arc head="cc_P5" kind="OUTPUT" tail="cc_T3"/>
+      <arc head="copy_P6" kind="OUTPUT" tail="copy_T4"/>
+      <arc head="T5" kind="INPUT" tail="cc_P5"/>
+      <arc head="T5" kind="INPUT" tail="copy_P6"/>
+      <arc head="copy_T6" kind="INPUT" tail="P7"/>
+      <arc head="copy_P8" kind="OUTPUT" tail="copy_T6"/>
+      <arc head="P9" kind="OUTPUT" tail="copy_T6"/>
+      <arc head="copy_T7" kind="INPUT" tail="copy_P8"/>
+      <arc head="copy_P10" kind="OUTPUT" tail="copy_T7"/>
+      <arc head="T8" kind="INPUT" tail="P9"/>
+      <arc head="copy_P11" kind="OUTPUT" tail="T8"/>
+      <arc head="copy_T9" kind="INPUT" tail="copy_P10"/>
+      <arc head="copy_T9" kind="INPUT" tail="copy_P11"/>
+      <arc head="OpLocalOk2" kind="OUTPUT" tail="OpLocal2"/>
+      <arc head="T10" kind="INPUT" tail="OpLocalOk1"/>
+      <arc head="P14" kind="OUTPUT" tail="T5"/>
+      <arc head="returnRepl1" kind="INPUT" tail="P14">
+        <point x="21.0" y="42.0"/>
+      </arc>
+      <arc head="P7" kind="OUTPUT" tail="T12"/>
+      <arc head="P15" kind="OUTPUT" tail="copy_T9"/>
+      <arc head="T12" kind="INHIBITOR" tail="P7"/>
+      <arc head="T10" kind="INHIBITOR" tail="cc_P2"/>
+      <arc head="copy_T14" kind="INHIBITOR" tail="cc_P2"/>
+      <arc head="copy_T14" kind="INPUT" tail="OpLocalOk2">
+        <point x="42.0" y="18.5"/>
+      </arc>
+      <arc head="cc_P2" kind="OUTPUT" tail="copy_T14"/>
+      <arc head="ReleaseM1" kind="INHIBITOR" tail="Mast1"/>
+      <arc head="ReleaseM1" kind="INPUT" tail="ResElabor"/>
+      <arc head="ReleaseM2" kind="INHIBITOR" tail="Mast2"/>
+      <arc head="Mast1" kind="OUTPUT" tail="ReleaseM1"/>
+      <arc head="Mast2" kind="OUTPUT" tail="ReleaseM2"/>
+      <arc head="ReleaseM2" kind="INPUT" tail="ResElabor"/>
+      <arc head="SizeBuf1" kind="OUTPUT" tail="T10"/>
+      <arc head="cc_P2" kind="OUTPUT" tail="T10"/>
+      <arc head="T10" kind="INPUT" tail="Slave3"/>
+      <arc head="Slave3" kind="OUTPUT" tail="returnRepl1">
+        <point x="27.0" y="28.0"/>
+        <point x="27.0" y="45.0"/>
+        <point x="1.5" y="44.5"/>
+      </arc>
+      <arc head="Repl1" kind="OUTPUT" tail="returnRepl1"/>
+      <arc head="ElabResServiz1" kind="INPUT" tail="Repl1"/>
+      <arc head="ResElabor" kind="OUTPUT" tail="ElabResServiz1"/>
+      <arc head="Buffer3" kind="OUTPUT" tail="OpLocal1"/>
+      <arc head="insertRequestInBuff3" kind="INPUT" tail="Buffer3"/>
+      <arc head="OpLocalOk1" kind="OUTPUT" tail="insertRequestInBuff3"/>
+      <arc head="insertRequestInBuff3" kind="INPUT" tail="SizeBuf1"/>
+      <arc head="returnRepl1" kind="INHIBITOR" tail="Slave3">
+        <point x="1.5" y="44.5"/>
+        <point x="27.0" y="45.0"/>
+        <point x="27.0" y="28.0"/>
+      </arc>
+      <arc head="insertRequestInBuff4" kind="INPUT" tail="OpLocalOk2"/>
+      <arc head="Buffer4" kind="OUTPUT" tail="insertRequestInBuff4"/>
+      <arc head="T12" kind="INPUT" tail="Buffer4"/>
+      <arc head="insertRequestInBuff4" kind="INPUT" mult-k="0.47294921874999996" tail="SizeBuf2"/>
+      <arc head="T12" kind="INPUT" tail="Slave4"/>
+      <arc head="returnRepl2" kind="INPUT" tail="P15">
+        <point x="35.0" y="45.0"/>
+      </arc>
+      <arc head="Repl2" kind="OUTPUT" tail="returnRepl2"/>
+      <arc head="ElabResServiz2" kind="INPUT" tail="Repl2"/>
+      <arc head="cc_P1" kind="OUTPUT" tail="ElabResServiz2"/>
+      <arc head="T13" kind="INPUT" tail="cc_P1"/>
+      <arc head="T15" kind="INPUT" tail="cc_P1"/>
+      <arc head="T13" kind="INHIBITOR" tail="Mast1">
+        <point x="30.0" y="28.0"/>
+      </arc>
+      <arc head="Mast1" kind="OUTPUT" tail="T13">
+        <point x="30.0" y="28.0"/>
+      </arc>
+      <arc head="T15" kind="INHIBITOR" tail="Mast2">
+        <point x="40.0" y="15.0"/>
+        <point x="40.0" y="28.0"/>
+      </arc>
+      <arc head="Mast2" kind="OUTPUT" tail="T15">
+        <point x="40.0" y="28.0"/>
+        <point x="40.0" y="15.0"/>
+      </arc>
+      <arc head="Slave4" kind="OUTPUT" tail="returnRepl2">
+        <point x="35.0" y="50.5"/>
+        <point x="60.0" y="50.5"/>
+      </arc>
+      <arc head="SizeBuf2" kind="OUTPUT" tail="T12">
+        <point x="60.0" y="11.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>
